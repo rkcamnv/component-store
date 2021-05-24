@@ -1,0 +1,12 @@
+<ng-container *ngIf="(vm$ | async) as vm">
+    <span>{{vm.name}}</span>
+    <p>
+        <strong>{{vm.user?.name}}</strong>
+    </p>
+
+    <form nz-form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <input nz-input [formControlName]="'name'">
+
+        <button nz-button nzType="primary">Save</button>
+    </form>
+</ng-container>

@@ -1,0 +1,6 @@
+<ng-container *ngIf="(vm$ | async) as vm">
+    <span>{{vm.name}}</span>
+    <p>
+        <strong>{{vm.user?.name}}</strong>
+    </p>
+</ng-container>
